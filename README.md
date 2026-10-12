@@ -34,6 +34,22 @@ La aplicación estará disponible en `http://127.0.0.1:8000/comisiones`.
 Para trabajar con recarga automática del frontend, usa `npm run dev` en otra
 terminal en lugar de `npm run build`.
 
+## Despliegue de demostración en Render
+
+El proyecto incluye `Dockerfile` y `render.yaml`. El despliegue usa SQLite y
+vuelve a crear los datos de ejemplo mediante los seeders cada vez que inicia el
+contenedor. Esta configuración es adecuada para una demostración, pero no para
+guardar información nueva de forma permanente.
+
+1. Sube el proyecto a un repositorio de GitHub.
+2. Genera una clave para producción con `php artisan key:generate --show`.
+3. En Render selecciona **New > Blueprint** y conecta el repositorio.
+4. Cuando Render solicite `APP_KEY`, pega la clave generada en el paso anterior.
+5. Confirma la creación del servicio y espera a que finalice el despliegue.
+
+Render detectará `render.yaml`, construirá Vue, instalará Laravel, ejecutará
+las migraciones y cargará las ventas de ejemplo automáticamente.
+
 ## Estructura principal
 
 - `ComisionController`: valida las fechas y devuelve la respuesta.
