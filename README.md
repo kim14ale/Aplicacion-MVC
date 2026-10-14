@@ -4,6 +4,10 @@ Aplicación académica desarrollada con Laravel 12 y Vue 3. Permite consultar la
 ventas realizadas en un rango de fechas y calcular la comisión total de cada
 vendedor según reglas definidas por monto.
 
+**Video demostrativo:** [Ver en Youtube](https://youtu.be/kh9R8DYLVkk)
+
+**Link Github:**  [GitHub](https://github.com/kim14ale/Aplicacion-MVC)
+
 ## Requisitos
 
 - PHP 8.2 o superior
